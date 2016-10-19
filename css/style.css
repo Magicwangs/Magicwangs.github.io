@@ -1541,6 +1541,7 @@ span.toc-text {
 }
 .article-entry pre {
   color: #fff;
+  overflow: hidden;
 }
 .article-entry pre code {
   background: none;
@@ -1557,6 +1558,7 @@ span.toc-text {
   border: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 5px;
 }
 .article-entry .highlight table {
   margin: 0;
