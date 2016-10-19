@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Python爬虫学习 | Magicwangs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言我的爬虫之旅开始于下面这篇知乎
+
+带着一个目的来学爬虫。不要怂就是干！系统学习固然好，直接写一个项目出来效果更加简单粗暴！（不过自己现在的水平写出来都是流水一般的面向过程的代码，代码的重复部分太多，正在回过头去学习面向对象编程，学习类和方法的使用。不过我还是坚定地认为入门的时候应该直接简单粗暴地实践一个项目）哪里不会搜哪里！哪里报错改哪里！相信我,你遇到的99%的问题都能从网上找到相似的问题，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python爬虫学习">
+<meta property="og:url" content="http://Magicwangs.github.io/post/Python爬虫学习笔记/index.html">
+<meta property="og:site_name" content="Magicwangs">
+<meta property="og:description" content="前言我的爬虫之旅开始于下面这篇知乎
+
+带着一个目的来学爬虫。不要怂就是干！系统学习固然好，直接写一个项目出来效果更加简单粗暴！（不过自己现在的水平写出来都是流水一般的面向过程的代码，代码的重复部分太多，正在回过头去学习面向对象编程，学习类和方法的使用。不过我还是坚定地认为入门的时候应该直接简单粗暴地实践一个项目）哪里不会搜哪里！哪里报错改哪里！相信我,你遇到的99%的问题都能从网上找到相似的问题，">
+<meta property="og:image" content="http://7xrmky.com1.z0.glb.clouddn.com/zhengze.png?imageView/2/w/600">
+<meta property="og:updated_time" content="2016-09-27T02:45:26.980Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python爬虫学习">
+<meta name="twitter:description" content="前言我的爬虫之旅开始于下面这篇知乎
+
+带着一个目的来学爬虫。不要怂就是干！系统学习固然好，直接写一个项目出来效果更加简单粗暴！（不过自己现在的水平写出来都是流水一般的面向过程的代码，代码的重复部分太多，正在回过头去学习面向对象编程，学习类和方法的使用。不过我还是坚定地认为入门的时候应该直接简单粗暴地实践一个项目）哪里不会搜哪里！哪里报错改哪里！相信我,你遇到的99%的问题都能从网上找到相似的问题，">
+<meta name="twitter:image" content="http://7xrmky.com1.z0.glb.clouddn.com/zhengze.png?imageView/2/w/600">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xrmky.com1.z0.glb.clouddn.com/luf.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Magicwangs</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Work for Fun,Live for Love!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags">标签云</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Magicwangs" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Crawler/" style="font-size: 10px;">Crawler</a> <a href="/tags/Git-Flow/" style="font-size: 10px;">Git Flow</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Github-Page/" style="font-size: 10px;">Github Page</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/Yilia/" style="font-size: 10px;">Yilia</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">Work for Fun,Live for Love!</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Magicwangs</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xrmky.com1.z0.glb.clouddn.com/luf.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Magicwangs</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Work for Fun,Live for Love!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags">标签云</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Magicwangs" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Python爬虫学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/post/Python爬虫学习笔记/" class="article-date">
+  	<time datetime="2016-04-16T08:27:51.000Z" itemprop="datePublished">2016-04-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python爬虫学习
+    </h1>
+  
+
+      </header>
+              
+        <div class="article-info article-info-post">
+          
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Crawler/">Crawler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+          <div class="clearfix"></div>
+        </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+                      
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python基础"><span class="toc-number">2.</span> <span class="toc-text">Python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一些快捷键"><span class="toc-number">2.1.</span> <span class="toc-text">一些快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式"><span class="toc-number">2.2.</span> <span class="toc-text">正则表达式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#爬虫基础"><span class="toc-number">3.</span> <span class="toc-text">爬虫基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-number">3.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#几个教程"><span class="toc-number">3.2.</span> <span class="toc-text">几个教程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#爬虫实践"><span class="toc-number">4.</span> <span class="toc-text">爬虫实践</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#两个爬虫思路"><span class="toc-number">4.1.</span> <span class="toc-text">两个爬虫思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#爬虫代码"><span class="toc-number">4.2.</span> <span class="toc-text">爬虫代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#花瓣美女爬虫"><span class="toc-number">4.3.</span> <span class="toc-text">花瓣美女爬虫</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol>  
+            </div>
+            <script type="text/javascript">
+              var _article = document.getElementsByClassName('article')[0];
+              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+              setTimeout("_article.className += ' article2'",0); 
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);                
+            </script>
+          
+        
+        <h2 id="&#x524D;&#x8A00;"><a href="#&#x524D;&#x8A00;" class="headerlink" title="&#x524D;&#x8A00;"></a>&#x524D;&#x8A00;</h2><p>&#x6211;&#x7684;&#x722C;&#x866B;&#x4E4B;&#x65C5;&#x5F00;&#x59CB;&#x4E8E;&#x4E0B;&#x9762;&#x8FD9;&#x7BC7;<a href="http://www.zhihu.com/question/20899988" target="_blank" rel="external">&#x77E5;&#x4E4E;</a></p>
+<blockquote>
+<p>&#x5E26;&#x7740;&#x4E00;&#x4E2A;&#x76EE;&#x7684;&#x6765;&#x5B66;&#x722C;&#x866B;&#x3002;<br>&#x4E0D;&#x8981;&#x6002;&#x5C31;&#x662F;&#x5E72;&#xFF01;&#x7CFB;&#x7EDF;&#x5B66;&#x4E60;&#x56FA;&#x7136;&#x597D;&#xFF0C;&#x76F4;&#x63A5;&#x5199;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x51FA;&#x6765;&#x6548;&#x679C;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#xFF01;&#xFF08;&#x4E0D;&#x8FC7;&#x81EA;&#x5DF1;&#x73B0;&#x5728;&#x7684;&#x6C34;&#x5E73;&#x5199;&#x51FA;&#x6765;&#x90FD;&#x662F;&#x6D41;&#x6C34;&#x4E00;&#x822C;&#x7684;&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x590D;&#x90E8;&#x5206;&#x592A;&#x591A;&#xFF0C;&#x6B63;&#x5728;&#x56DE;&#x8FC7;&#x5934;&#x53BB;&#x5B66;&#x4E60;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#xFF0C;&#x5B66;&#x4E60;&#x7C7B;&#x548C;&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x4E0D;&#x8FC7;&#x6211;&#x8FD8;&#x662F;&#x575A;&#x5B9A;&#x5730;&#x8BA4;&#x4E3A;&#x5165;&#x95E8;&#x7684;&#x65F6;&#x5019;&#x5E94;&#x8BE5;&#x76F4;&#x63A5;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x5730;&#x5B9E;&#x8DF5;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF09;<br>&#x54EA;&#x91CC;&#x4E0D;&#x4F1A;&#x641C;&#x54EA;&#x91CC;&#xFF01;&#x54EA;&#x91CC;&#x62A5;&#x9519;&#x6539;&#x54EA;&#x91CC;&#xFF01;&#x76F8;&#x4FE1;&#x6211;,&#x4F60;&#x9047;&#x5230;&#x7684;99%&#x7684;&#x95EE;&#x9898;&#x90FD;&#x80FD;&#x4ECE;&#x7F51;&#x4E0A;&#x627E;&#x5230;&#x76F8;&#x4F3C;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x5199;&#x4EE3;&#x7801;&#xFF01;&#x641C;&#x95EE;&#x9898;&#xFF01;&#x8C03;BUG&#xFF01;&#x4F60;&#x641C;&#x4E0D;&#x5230;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;80%&#x7684;&#x60C5;&#x51B5;&#x662F;&#x4F60;&#x641C;&#x7D22;&#x7684;&#x59FF;&#x52BF;&#x4E0D;&#x5BF9;&#xFF0C;&#x53E6;&#x5916;20%&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F60;&#x81EA;&#x5DF1;&#x52A8;&#x52A8;&#x8111;&#x5B50;&#xFF0C;&#x6362;&#x4E2A;&#x601D;&#x8DEF;&#x53BB;&#x505A;&#x3002;</p>
+</blockquote>
+<a id="more"></a>
+<p><strong>&#x6211;&#x7684;&#x524D;&#x8A00;&#x5C31;&#x662F;&#xFF0C;&#x77E5;&#x4E4E;&#x4E0A;&#x8BF4;&#x7684;&#x5BF9;&#xFF01;&#xFF01;</strong></p>
+<h2 id="python&#x57FA;&#x7840;"><a href="#Python&#x57FA;&#x7840;" class="headerlink" title="Python&#x57FA;&#x7840;"></a>Python&#x57FA;&#x7840;</h2><p><strong>Python&#x7248;&#x672C;&#x4E3A; Python 2.7</strong><br>&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x6559;&#x7A0B;&#x53C2;&#x8003;&#x81EA;<a href="http://www.runoob.com/python/python-install.html" target="_blank" rel="external">&#x83DC;&#x9E1F;&#x6559;&#x7A0B;</a><br>&#x4F7F;&#x7528;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x4E3A; <code>Sublime Text 2</code>&#x548C;<code>Anaconda</code></p>
+<h3 id="&#x4E00;&#x4E9B;&#x5FEB;&#x6377;&#x952E;"><a href="#&#x4E00;&#x4E9B;&#x5FEB;&#x6377;&#x952E;" class="headerlink" title="&#x4E00;&#x4E9B;&#x5FEB;&#x6377;&#x952E;"></a>&#x4E00;&#x4E9B;&#x5FEB;&#x6377;&#x952E;</h3><p><strong>Spyder:</strong><br><code>Ctrl+1</code> &#x5168;&#x4F53;&#x6CE8;&#x91CA;/&#x53D6;&#x6D88;&#x6CE8;&#x91CA;<br><code>TAB</code> &#x5168;&#x4F53;&#x7F29;&#x8FDB;<br><code>Shift+TAB</code> &#x53D6;&#x6D88;&#x7F29;&#x8FDB;</p>
+<p><strong>Sublime:</strong><br><code>ctrl+b</code> &#x8FD0;&#x884C;python&#x7A0B;&#x5E8F;<br><code>ctrl+c</code> &#x505C;&#x6B62;&#x8FD0;&#x884C;<br><code>ctrl+/</code> &#x5168;&#x4F53;&#x6CE8;&#x91CA;/&#x53D6;&#x6D88;&#x6CE8;&#x91CA;<br><code>ctrl+]</code> &#x5168;&#x4F53;&#x7F29;&#x8FDB;<br><code>ctrl+[</code> &#x5168;&#x4F53;&#x4E0D;&#x7F29;&#x8FDB;<br><code>alt+num</code> &#x5207;&#x6362;&#x6807;&#x7B7E;&#x9875;</p>
+<h3 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" class="headerlink" title="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"></a>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h3><p>&#x53C2;&#x8003;&#x535A;&#x5BA2;<a href="https://www.zybuluo.com/chanvee/note/87894" target="_blank" rel="external">python&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a><br>Python&#x4E2D;&#x5728;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x5B57;&#x7B26;&#x524D;&#x52A0;&#x4E0A;&#x2019;r&#x2019;&#x8868;&#x793A; &#x201C;raw&#x201D; string&#xFF0C;&#x5176;&#x4F1A;&#x5728;&#x4E0D;&#x6539;&#x53D8;&#x53CD;&#x659C;&#x6760;&#xFF08;&#x5373;&#x4E0D;&#x7528;&#x5BF9;&#x5176;&#x8F6C;&#x4E49;&#xFF09;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x901A;&#x8FC7;&#xFF08;&#x7279;&#x522B;&#x662F;&#x5728;linux&#x548C;windows&#x7CFB;&#x7EDF;&#x7684;&#x8DEF;&#x5F84;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x5019;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x5EFA;&#x8BAE;&#x5728;&#x5199;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#x5728;&#x524D;&#x9762;&#x52A0;&#x4E0A;&#x2019;r&#x2019;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4E60;&#x60EF;&#x3002;<br><img src="http://7xrmky.com1.z0.glb.clouddn.com/zhengze.png?imageView/2/w/600" alt="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"></p>
+<h2 id="&#x722C;&#x866B;&#x57FA;&#x7840;"><a href="#&#x722C;&#x866B;&#x57FA;&#x7840;" class="headerlink" title="&#x722C;&#x866B;&#x57FA;&#x7840;"></a>&#x722C;&#x866B;&#x57FA;&#x7840;</h2><h3 id="&#x6982;&#x5FF5;"><a href="#&#x6982;&#x5FF5;" class="headerlink" title="&#x6982;&#x5FF5;"></a>&#x6982;&#x5FF5;</h3><blockquote>
+<p>&#x7F51;&#x7EDC;&#x722C;&#x866B;&#xFF08;&#x53C8;&#x88AB;&#x79F0;&#x4E3A;&#x7F51;&#x9875;&#x8718;&#x86DB;&#xFF0C;&#x7F51;&#x7EDC;&#x673A;&#x5668;&#x4EBA;&#xFF0C;&#x5728;FOAF&#x793E;&#x533A;&#x4E2D;&#x95F4;&#xFF0C;&#x66F4;&#x7ECF;&#x5E38;&#x7684;&#x79F0;&#x4E3A;&#x7F51;&#x9875;&#x8FFD;&#x9010;&#x8005;&#xFF09;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x81EA;&#x52A8;&#x7684;&#x6293;&#x53D6;&#x4E07;&#x7EF4;&#x7F51;&#x4FE1;&#x606F;&#x7684;&#x7A0B;&#x5E8F;&#x6216;&#x8005;&#x811A;&#x672C;&#x3002;</p>
+</blockquote>
+<h3 id="&#x51E0;&#x4E2A;&#x6559;&#x7A0B;"><a href="#&#x51E0;&#x4E2A;&#x6559;&#x7A0B;" class="headerlink" title="&#x51E0;&#x4E2A;&#x6559;&#x7A0B;"></a>&#x51E0;&#x4E2A;&#x6559;&#x7A0B;</h3><p>&#x722C;&#x866B;&#x5165;&#x95E8;&#xFF1A;</p>
+<ul>
+<li><a href="http://www.lining0806.com/python%E5%85%A5%E9%97%A8%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E4%B9%8B%E7%B2%BE%E5%8D%8E%E7%89%88/" target="_blank" rel="external">Python&#x5165;&#x95E8;&#x7F51;&#x7EDC;&#x722C;&#x866B;&#x4E4B;&#x7CBE;&#x534E;&#x7248;</a></li>
+<li><a href="http://cuiqingcai.com/1052.html" target="_blank" rel="external">Python&#x722C;&#x866B;&#x5B66;&#x4E60;&#x7CFB;&#x5217;&#x6559;&#x7A0B;</a><br>&#x722C;&#x866B;&#x5E38;&#x7528;&#x7684;&#x4E24;&#x4E2A;&#x5DE5;&#x5177;&#xFF1A;</li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/" target="_blank" rel="external">BeautifulSoup</a></li>
+<li><a href="http://www.chengxuyuans.com/plus/search.php?q=webdriver&amp;searchtype=title" target="_blank" rel="external">WebDriver&#x6559;&#x7A0B;</a></li>
+<li><a href="http://www.jianshu.com/p/2804823923b4" target="_blank" rel="external">python &#x8C03;&#x7528;selenium&#x5907;&#x5FD8;</a><br><strong>&#x6CE8;&#xFF1A;</strong>&#x722C;&#x866B;&#x5E38;&#x9009;&#x7528;Firefox&#x6D4F;&#x89C8;&#x5668;(&#x66FE;&#x5C1D;&#x8BD5;Chrome&#x4F46;&#x662F;&#x600E;&#x4E48;&#x90FD;&#x65E0;&#x6CD5;&#x6253;&#x5F00;&#xFF0C;)<br>&#x7406;&#x7531;&#xFF1A;<blockquote>
+<p>Firefox Driver comes with Selenium/Webdriver itself. No need to launch an external server (like Chromedriver). It is all built-in.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="&#x722C;&#x866B;&#x5B9E;&#x8DF5;"><a href="#&#x722C;&#x866B;&#x5B9E;&#x8DF5;" class="headerlink" title="&#x722C;&#x866B;&#x5B9E;&#x8DF5;"></a>&#x722C;&#x866B;&#x5B9E;&#x8DF5;</h2><h3 id="&#x4E24;&#x4E2A;&#x722C;&#x866B;&#x601D;&#x8DEF;"><a href="#&#x4E24;&#x4E2A;&#x722C;&#x866B;&#x601D;&#x8DEF;" class="headerlink" title="&#x4E24;&#x4E2A;&#x722C;&#x866B;&#x601D;&#x8DEF;"></a>&#x4E24;&#x4E2A;&#x722C;&#x866B;&#x601D;&#x8DEF;</h3><p>&#x601D;&#x8DEF;&#x4E00;&#xFF1A;&#x5206;&#x6790;&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;URL&#x53D8;&#x5316;&#xFF0C;&#x4EE5;&#x53CA;&#x89C2;&#x5BDF;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x9875;&#x9762;&#x53D1;&#x9001;&#x7684;HTTP&#x8BF7;&#x6C42;&#xFF1B;<br>&#x601D;&#x8DEF;&#x4E8C;&#xFF1A;&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;</p>
+<h3 id="&#x722C;&#x866B;&#x4EE3;&#x7801;"><a href="#&#x722C;&#x866B;&#x4EE3;&#x7801;" class="headerlink" title="&#x722C;&#x866B;&#x4EE3;&#x7801;"></a>&#x722C;&#x866B;&#x4EE3;&#x7801;</h3><p>&#x601D;&#x8DEF;&#x4E00;&#xFF1A;&#x8C37;&#x6B4C;&#x56FE;&#x7247;&#x641C;&#x7D22;&#x722C;&#x866B;<br>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;<code>F12</code>&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x5230;&#x8C37;&#x6B4C;&#x9875;&#x9762;&#x4E0B;&#x62C9;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x51FA;&#x7684;&#x8BF7;&#x6C42;&#x3002;<br><strong>&#x96BE;&#x70B9;</strong>&#xFF1A;&#x8981;&#x5BF9;&#x521D;&#x59CB;&#x9875;&#x9762;&#x5355;&#x72EC;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x53CD;&#x9988;&#x7684;&#x4EE3;&#x7801;&#x4E3A;f.txt&#x6587;&#x4EF6;&#x3002;<br>&#x5173;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BBE;&#x7F6E;&#x53EF;&#x4EE5;&#x5728;&#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;<code>about:config</code>&#x67E5;&#x770B;</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding:utf-8</span></div><div class="line"><span class="comment">#__author__&#xFF1A;MagicWang</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">BASE_DIR = os.path.dirname(__file__) <span class="comment">##&#x83B7;&#x53D6;&#x672C;&#x5730;&#x76EE;&#x5F55;</span></div><div class="line"></div><div class="line">fp = webdriver.FirefoxProfile()      <span class="comment">#&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x706B;&#x72D0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span></div><div class="line">fp.set_preference(<span class="string">&quot;browser.download.folderList&quot;</span>,<span class="number">2</span>)  <span class="comment">#&#x8BBE;&#x7F6E;&#x6210;0&#x4EE3;&#x8868;&#x4E0B;&#x8F7D;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x9ED8;&#x8BA4;&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;&#xFF1B;&#x8BBE;&#x7F6E;&#x6210;2&#x5219;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</span></div><div class="line">fp.set_preference(<span class="string">&quot;browser.download.manager.showWhenStarting&quot;</span>,<span class="keyword">False</span>)  <span class="comment">#&#x662F;&#x5426;&#x663E;&#x793A;&#x5F00;&#x59CB;</span></div><div class="line">fp.set_preference(<span class="string">&quot;browser.download.dir&quot;</span>,BASE_DIR)   <span class="comment">#&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;</span></div><div class="line">fp.set_preference(<span class="string">&quot;browser.helperApps.neverAsk.saveToDisk&quot;</span>,<span class="string">&quot;text/javascript; charset=UTF-8&quot;</span>)</div><div class="line">    <span class="comment">#&#x4E0D;&#x8BE2;&#x95EE;&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;&#xFF1B;&#x540E;&#x9762;&#x7684;&#x53C2;&#x6570;&#x4E3A;&#x8981;&#x4E0B;&#x8F7D;&#x9875;&#x9762;&#x7684;Content-type&#x7684;&#x503C;  &#x53EF;&#x4EE5;&#x4ECE;http&#x5934;&#x770B;&#x51FA;&#x6765;</span></div><div class="line">driver = webdriver.Firefox(fp)<span class="comment">#&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x706B;&#x72D0;&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x7A0B;&#xFF0C;&#x4EE5;&#x521A;&#x624D;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x53C2;&#x6570;</span></div><div class="line"></div><div class="line">x=<span class="number">0</span></div><div class="line">keywords=<span class="string">&quot;hound&quot;</span>       <span class="comment">#&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x53EF;&#x81EA;&#x884C;&#x4FEE;&#x6539;</span></div><div class="line">original=<span class="string">r&apos;&quot;ou&quot;:&quot;(.*?)&quot;&apos;</span></div><div class="line">DATA_DIR=BASE_DIR+<span class="string">&apos;//f.txt&apos;</span></div><div class="line"></div><div class="line">firstUrl=<span class="string">&quot;https://www.google.com/search?biw=629&amp;bih=599&amp;tbm=isch&amp;sa=1&amp;q=&quot;</span>+keywords</div><div class="line">driver.get(firstUrl)</div><div class="line">firstPage=driver.page_source.encode(<span class="string">&quot;utf-8&quot;</span>)</div><div class="line">address=re.findall(original,str(firstPage))</div><div class="line"><span class="keyword">for</span> link <span class="keyword">in</span> set(address):</div><div class="line">    print(link)</div><div class="line">    x+=<span class="number">1</span></div><div class="line">    print(x)</div><div class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> range(<span class="number">2</span>):    <span class="comment">##&#x5FAA;&#x73AF;&#x6B64;&#x5904;&#xFF0C;&#x4E00;&#x6B21;100&#x5F20;</span></div><div class="line">    current_index=(page_num+<span class="number">1</span>)*<span class="number">100</span></div><div class="line">    searchUrl=<span class="string">&quot;https://www.google.com/search?q=&quot;</span>+<span class="string">&quot;hound&quot;</span>+<span class="string">&quot;&amp;rlz=1C1CHWL_zh-CN__678__678&amp;tbm=isch&amp;ijn=2&amp;ei=iAEVV5i_IITQmAWyzJK4Cw&amp;start=&quot;</span>+ str(current_index) + <span class="string">&quot;&amp;ved=0ahUKEwiYo5a1xJjMAhUEKKYKHTKmBLcQuT0IISgB&amp;vet=10ahUKEwiYo5a1xJjMAhUEKKYKHTKmBLcQuT0IISgB.iAEVV5i_IITQmAWyzJK4Cw.i&quot;</span></div><div class="line">    driver.get(searchUrl)</div><div class="line">    time.sleep(<span class="number">1</span>)  <span class="comment">##&#x7ED9;txt&#x4E0B;&#x8F7D;&#x7684;&#x65F6;&#x95F4;</span></div><div class="line">    fobj=open(DATA_DIR,<span class="string">&apos;r+&apos;</span>,encoding=<span class="string">&quot;utf8&quot;</span>)</div><div class="line">    content=fobj.read()</div><div class="line">    address=re.findall(original,str(content))</div><div class="line">    <span class="keyword">for</span> link <span class="keyword">in</span> set(address):</div><div class="line">        print(link)</div><div class="line">        x+=<span class="number">1</span></div><div class="line">        print(x)</div><div class="line">    fobj.close()</div><div class="line">    os.remove(DATA_DIR)</div></pre></td></tr></table></figure>
+<p>&#x601D;&#x8DEF;&#x4E8C;&#xFF1A;&#x8C37;&#x6B4C;&#x56FE;&#x7247;&#x641C;&#x7D22;&#x722C;&#x866B;<br>&#x901A;&#x8FC7;js&#x4EE3;&#x7801;&#xFF0C;&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x62C9;&#x81F3;&#x5E95;&#x90E8;<br><code>js=&quot;var q=document.documentElement.scrollTop=100000&quot;</code><br>&#x5177;&#x4F53;&#x4EE3;&#x7801;&#xFF1A;<br><figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding:utf-8</span></div><div class="line"><span class="comment">#__author__&#xFF1A;MagicWang</span></div><div class="line"></div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line">keywords=<span class="string">&quot;hound&quot;</span></div><div class="line">driver = webdriver.Firefox()</div><div class="line">driver.get(<span class="string">&quot;https://www.google.com/search?biw=629&amp;bih=599&amp;tbm=isch&amp;sa=1&amp;q=&quot;</span>+keywords)</div><div class="line">js=<span class="string">&quot;var q=document.documentElement.scrollTop=100000&quot;</span></div><div class="line">driver.execute_script(js)</div><div class="line">driver.implicitly_wait(<span class="number">5</span>)</div><div class="line"></div><div class="line">content=driver.page_source.encode(<span class="string">&quot;utf-8&quot;</span>)</div><div class="line">x=<span class="number">0</span></div><div class="line">number = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">    waitCount = <span class="number">0</span></div><div class="line">    print(<span class="string">&apos;page:&apos;</span>+str(page_num+<span class="number">1</span>))</div><div class="line">    driver.execute_script(js)</div><div class="line">    <span class="keyword">while</span>(content==driver.page_source.encode(<span class="string">&quot;utf-8&quot;</span>)):</div><div class="line">        waitCount += <span class="number">1</span></div><div class="line">        time.sleep(<span class="number">0.2</span>)</div><div class="line">        <span class="keyword">print</span> (<span class="string">&quot;waitCount:&quot;</span> + str(waitCount))</div><div class="line">        <span class="keyword">if</span>(waitCount &gt;= <span class="number">20</span>):</div><div class="line">            <span class="keyword">break</span></div><div class="line">    <span class="keyword">if</span>(waitCount &gt;= <span class="number">20</span>):</div><div class="line">        <span class="keyword">break</span></div><div class="line">    <span class="keyword">print</span> (<span class="string">&quot;new content&quot;</span>)</div><div class="line">    content = driver.page_source.encode(<span class="string">&quot;utf-8&quot;</span>)</div><div class="line"></div><div class="line">original=<span class="string">r&apos;&quot;ou&quot;:&quot;(.*?)&quot;&apos;</span></div><div class="line">address=re.findall(original,str(content))</div><div class="line"><span class="keyword">for</span> link <span class="keyword">in</span> set(address):</div><div class="line">    print(link)</div><div class="line">    x+=<span class="number">1</span></div><div class="line">    print(x)</div></pre></td></tr></table></figure></p>
+<h3 id="&#x82B1;&#x74E3;&#x7F8E;&#x5973;&#x722C;&#x866B;"><a href="#&#x82B1;&#x74E3;&#x7F8E;&#x5973;&#x722C;&#x866B;" class="headerlink" title="&#x82B1;&#x74E3;&#x7F8E;&#x5973;&#x722C;&#x866B;"></a>&#x82B1;&#x74E3;&#x7F8E;&#x5973;&#x722C;&#x866B;</h3><p>&#x7B2C;&#x4E8C;&#x79CD;&#x601D;&#x8DEF;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4E3A;&#x5E7F;&#x5927;&#x5B85;&#x7537;&#x8C0B;&#x798F;&#x5229;</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#coding:utf-8</span></div><div class="line"><span class="comment">#__author__&#xFF1A;MagicWang</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> re</div><div class="line"><span class="keyword">import</span> time</div><div class="line"><span class="keyword">import</span> os</div><div class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</div><div class="line"></div><div class="line">x=<span class="number">0</span></div><div class="line">BASE_DIR=os.path.dirname(__file__) <span class="comment">#&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;</span></div><div class="line">dir =<span class="string">&quot;./HuanbanBeauty&quot;</span> <span class="comment">#&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x5939;</span></div><div class="line"><span class="keyword">try</span>:</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(dir):</div><div class="line">        os.mkdir(dir)</div><div class="line">    DATA_DIR=BASE_DIR+<span class="string">&apos;\\&apos;</span>+<span class="string">&apos;HuanbanBeauty&apos;</span></div><div class="line"><span class="keyword">except</span>:</div><div class="line">    <span class="keyword">print</span> (<span class="string">&quot;Failed to create directory:&quot;</span>)</div><div class="line">    exit()</div><div class="line"><span class="keyword">print</span> (<span class="string">&quot;config OK!&quot;</span>)</div><div class="line"></div><div class="line">startIndex=<span class="number">0</span></div><div class="line">driver=webdriver.Firefox()</div><div class="line">driver.get(<span class="string">&quot;http://huaban.com/favorite/beauty&quot;</span>)</div><div class="line">js=<span class="string">&quot;var q=document.documentElement.scrollTop=100000&quot;</span></div><div class="line"></div><div class="line">x=<span class="number">0</span></div><div class="line">my_headers=<span class="string">&apos;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.108 Safari/537.36&apos;</span></div><div class="line">content=driver.page_source.encode(<span class="string">&quot;utf-8&quot;</span>)</div><div class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">    waitCount = <span class="number">0</span></div><div class="line">    print(<span class="string">&apos;page:&apos;</span>+str(page_num+<span class="number">1</span>))</div><div class="line">    driver.execute_script(js)</div><div class="line">    <span class="keyword">while</span>(content==driver.page_source.encode(<span class="string">&quot;utf-8&quot;</span>)):</div><div class="line">        waitCount += <span class="number">1</span></div><div class="line">        time.sleep(<span class="number">0.2</span>)</div><div class="line">        <span class="keyword">print</span> <span class="string">&quot;waitCount:&quot;</span> + str(waitCount)</div><div class="line">        <span class="keyword">if</span>(waitCount &gt;= <span class="number">20</span>):</div><div class="line">            <span class="keyword">break</span></div><div class="line">    <span class="keyword">if</span>(waitCount &gt;= <span class="number">20</span>):</div><div class="line">        <span class="keyword">break</span></div><div class="line">    <span class="keyword">print</span> <span class="string">&quot;new content&quot;</span></div><div class="line">    content = driver.page_source.encode(<span class="string">&quot;utf-8&quot;</span>)</div><div class="line"><span class="comment">#    saveContent = open(&apos;flickr_&apos; + str(page_num) + &apos;.html&apos;, &apos;wb&apos;)</span></div><div class="line"><span class="comment">#    saveContent.write(content)</span></div><div class="line"><span class="comment">#    saveContent.close()</span></div><div class="line">    urls=re.findall(<span class="string">r&apos;a class=&quot;img x layer-view loaded&quot; rel=&quot;&quot; target=&quot;_self&quot; href=&quot;/pins/(.*?)span&apos;</span>,content,re.I)</div><div class="line">    <span class="keyword">for</span> link <span class="keyword">in</span> urls:</div><div class="line">        matchUrl=re.findall(<span class="string">&apos;src=&quot;(.*?)&quot;&apos;</span>,link, re.I)</div><div class="line">        <span class="keyword">for</span> links <span class="keyword">in</span> matchUrl:</div><div class="line">            BigLink=links.replace(<span class="string">&apos;_fw236&apos;</span>,<span class="string">&apos;_fw658&apos;</span>)  <span class="comment">#&#x5C06;&#x5C0F;&#x56FE;&#x8F6C;&#x5316;&#x4E3A;&#x5927;&#x56FE;</span></div><div class="line">            <span class="keyword">print</span> BigLink</div><div class="line">            <span class="keyword">try</span>:</div><div class="line">                req=urllib2.Request(BigLink)</div><div class="line">                req.add_header(<span class="string">&apos;User-Agent&apos;</span>,my_headers)</div><div class="line">                content=urllib2.urlopen(req)</div><div class="line">                fobj=open(DATA_DIR+<span class="string">&apos;//%s.jpg&apos;</span>%startIndex,<span class="string">&apos;wb&apos;</span>)</div><div class="line">                fobj.write(content.read())</div><div class="line">                fobj.close()</div><div class="line">                startIndex+=<span class="number">1</span></div><div class="line">                print(<span class="string">&apos;save picture&apos;</span>)</div><div class="line">            <span class="keyword">except</span>:</div><div class="line">                print(<span class="string">&apos;&#x5730;&#x5740;&#x6709;&#x8BEF;&#xFF0C;&#x4E0B;&#x8F7D;&#x5931;&#x8D25;&apos;</span>)</div><div class="line">                <span class="keyword">continue</span></div></pre></td></tr></table></figure>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><ul>
+<li><a href="https://jecvay.com/category/smtech/python3-webbug" target="_blank" rel="external">&#x96F6;&#x57FA;&#x7840;Python3&#x722C;&#x866B;</a></li>
+<li><a href="http://blog.chinaunix.net/uid-23500957-id-3878770.html" target="_blank" rel="external">Python&#x6293;&#x53D6;&#x82B1;&#x74E3;&#x7F51;&#x56FE;&#x7247;&#x811A;&#x672C;</a></li>
+<li><a href="http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html" target="_blank" rel="external">Python&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6307;&#x5357;</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/post/SQLite学习小结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          SQLite学习小结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/post/Git学习总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git学习笔记</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Python爬虫学习笔记" data-title="Python爬虫学习" data-url="http://Magicwangs.github.io/post/Python爬虫学习笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"magicwangs"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://magicwangs.github.io/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Magicwangs
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75905730-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

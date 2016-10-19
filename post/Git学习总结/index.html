@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Git学习笔记 | Magicwangs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="作为一名工科男子，会用Git，似乎是一件平常得不能再平常的事情。但之前使用Git一直停留在边看教程边敲命令的状态，一直无法正确理解Git的正确打开方式，被学长吐槽“你这样搞，Linus会伤心的”。动笔写下这篇笔记，不是因为自己对其很了解，恰恰是对其太不了解。
+
+Git 是由 Linux 之父 Linus Tovalds 为了更好地管理linux内核开发而创立的分布式版本控制／软件配置管理软件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git学习笔记">
+<meta property="og:url" content="http://Magicwangs.github.io/post/Git学习总结/index.html">
+<meta property="og:site_name" content="Magicwangs">
+<meta property="og:description" content="作为一名工科男子，会用Git，似乎是一件平常得不能再平常的事情。但之前使用Git一直停留在边看教程边敲命令的状态，一直无法正确理解Git的正确打开方式，被学长吐槽“你这样搞，Linus会伤心的”。动笔写下这篇笔记，不是因为自己对其很了解，恰恰是对其太不了解。
+
+Git 是由 Linux 之父 Linus Tovalds 为了更好地管理linux内核开发而创立的分布式版本控制／软件配置管理软件。">
+<meta property="og:image" content="http://7xrmky.com1.z0.glb.clouddn.com/what_is_github.jpg?imageView/2/w/700">
+<meta property="og:image" content="http://7xrmky.com1.z0.glb.clouddn.com/git-flow.png?imageView/2/w/600">
+<meta property="og:updated_time" content="2016-04-28T00:39:09.782Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git学习笔记">
+<meta name="twitter:description" content="作为一名工科男子，会用Git，似乎是一件平常得不能再平常的事情。但之前使用Git一直停留在边看教程边敲命令的状态，一直无法正确理解Git的正确打开方式，被学长吐槽“你这样搞，Linus会伤心的”。动笔写下这篇笔记，不是因为自己对其很了解，恰恰是对其太不了解。
+
+Git 是由 Linux 之父 Linus Tovalds 为了更好地管理linux内核开发而创立的分布式版本控制／软件配置管理软件。">
+<meta name="twitter:image" content="http://7xrmky.com1.z0.glb.clouddn.com/what_is_github.jpg?imageView/2/w/700">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xrmky.com1.z0.glb.clouddn.com/luf.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Magicwangs</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Work for Fun,Live for Love!</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags">标签云</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/Magicwangs" title="github">github</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Crawler/" style="font-size: 10px;">Crawler</a> <a href="/tags/Git-Flow/" style="font-size: 10px;">Git Flow</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Github-Page/" style="font-size: 10px;">Github Page</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 20px;">Markdown</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/SQLite/" style="font-size: 10px;">SQLite</a> <a href="/tags/Yilia/" style="font-size: 10px;">Yilia</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">Work for Fun,Live for Love!</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Magicwangs</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xrmky.com1.z0.glb.clouddn.com/luf.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Magicwangs</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Work for Fun,Live for Love!</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags">标签云</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Magicwangs" title="github">github</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Git学习总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/post/Git学习总结/" class="article-date">
+  	<time datetime="2016-04-13T03:02:16.000Z" itemprop="datePublished">2016-04-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Git学习笔记
+    </h1>
+  
+
+      </header>
+              
+        <div class="article-info article-info-post">
+          
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git-Flow/">Git Flow</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li></ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+          <div class="clearfix"></div>
+        </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        
+                      
+            <div id="toc" class="article-toc">
+            <h2>目录</h2>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github"><span class="toc-number">1.</span> <span class="toc-text">Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git配置"><span class="toc-number">2.</span> <span class="toc-text">Git配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加ssh"><span class="toc-number">2.1.</span> <span class="toc-text">添加SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置username和email"><span class="toc-number">2.2.</span> <span class="toc-text">设置username和email</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git项目建立"><span class="toc-number">3.</span> <span class="toc-text">Git项目建立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新远端修改和合并"><span class="toc-number">4.</span> <span class="toc-text">更新远端修改和合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git分支"><span class="toc-number">5.</span> <span class="toc-text">Git分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本回退"><span class="toc-number">6.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-flow"><span class="toc-number">7.</span> <span class="toc-text">git flow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何管理git分支"><span class="toc-number">7.1.</span> <span class="toc-text">如何管理Git分支？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-flow指令"><span class="toc-number">7.2.</span> <span class="toc-text">git flow指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">8.</span> <span class="toc-text">参考资料</span></a></li></ol>  
+            </div>
+            <script type="text/javascript">
+              var _article = document.getElementsByClassName('article')[0];
+              <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
+              setTimeout("_article.className += ' article2'",0); 
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);                
+            </script>
+          
+        
+        <p>&#x4F5C;&#x4E3A;&#x4E00;&#x540D;&#x5DE5;&#x79D1;&#x7537;&#x5B50;&#xFF0C;&#x4F1A;&#x7528;Git&#xFF0C;&#x4F3C;&#x4E4E;&#x662F;&#x4E00;&#x4EF6;&#x5E73;&#x5E38;&#x5F97;&#x4E0D;&#x80FD;&#x518D;&#x5E73;&#x5E38;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x4F46;&#x4E4B;&#x524D;&#x4F7F;&#x7528;Git&#x4E00;&#x76F4;&#x505C;&#x7559;&#x5728;&#x8FB9;&#x770B;&#x6559;&#x7A0B;&#x8FB9;&#x6572;&#x547D;&#x4EE4;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4E00;&#x76F4;&#x65E0;&#x6CD5;&#x6B63;&#x786E;&#x7406;&#x89E3;Git&#x7684;&#x6B63;&#x786E;&#x6253;&#x5F00;&#x65B9;&#x5F0F;&#xFF0C;&#x88AB;&#x5B66;&#x957F;&#x5410;&#x69FD;&#x201C;&#x4F60;&#x8FD9;&#x6837;&#x641E;&#xFF0C;Linus&#x4F1A;&#x4F24;&#x5FC3;&#x7684;&#x201D;&#x3002;<br>&#x52A8;&#x7B14;&#x5199;&#x4E0B;&#x8FD9;&#x7BC7;&#x7B14;&#x8BB0;&#xFF0C;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x81EA;&#x5DF1;&#x5BF9;&#x5176;&#x5F88;&#x4E86;&#x89E3;&#xFF0C;&#x6070;&#x6070;&#x662F;&#x5BF9;&#x5176;&#x592A;&#x4E0D;&#x4E86;&#x89E3;&#x3002;</p>
+<blockquote>
+<p>Git &#x662F;&#x7531; Linux &#x4E4B;&#x7236; Linus Tovalds &#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x5730;&#x7BA1;&#x7406;linux&#x5185;&#x6838;&#x5F00;&#x53D1;&#x800C;&#x521B;&#x7ACB;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x7248;&#x672C;&#x63A7;&#x5236;&#xFF0F;&#x8F6F;&#x4EF6;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x8F6F;&#x4EF6;&#x3002;</p>
+</blockquote>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;Git&#x662F;&#x4E00;&#x4E2A;&#x7BA1;&#x7406;<code>&#x4EE3;&#x7801;&#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;</code>&#x7684;&#x5DE5;&#x5177;&#x3002;</p>
+<p><strong>&#x8FD9;&#x662F;&#x4E00;&#x7BC7;Git&#x547D;&#x4EE4;&#x5907;&#x5FD8;&#x5F55;&#xFF0C;&#x627E;Git&#x6559;&#x7A0B;&#x7684;&#x8BF7;&#x51FA;&#x95E8;&#x5DE6;&#x62D0;</strong><br><a id="more"></a></p>
+<h2 id="github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>Github&#x662F;&#x4E00;&#x4E2A;&#x600E;&#x6837;&#x7684;&#x5B58;&#x5728;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x662F;&#x4E00;&#x4E2A;<strong>&#x7F51;&#x4E0A;&#x771F;&#x4EBA;&#x7EA6;&#x4F1A;&#x573A;&#x6240;</strong></p>
+<p><img src="http://7xrmky.com1.z0.glb.clouddn.com/what_is_github.jpg?imageView/2/w/700" alt="what_is_github"><br>&#x5177;&#x4F53;&#x7684;Git&#x5B89;&#x88C5;&#x548C;&#x6CE8;&#x518C;Github&#x8D26;&#x53F7;&#x7684;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://www.runoob.com/w3cnote/git-guide.html" target="_blank" rel="external">&#x83DC;&#x9E1F;&#x6559;&#x7A0B;</a></p>
+<h2 id="git&#x914D;&#x7F6E;"><a href="#Git&#x914D;&#x7F6E;" class="headerlink" title="Git&#x914D;&#x7F6E;"></a>Git&#x914D;&#x7F6E;</h2><h3 id="&#x6DFB;&#x52A0;ssh"><a href="#&#x6DFB;&#x52A0;SSH" class="headerlink" title="&#x6DFB;&#x52A0;SSH"></a>&#x6DFB;&#x52A0;SSH</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot; </div><div class="line">//&#x5728;&#x672C;&#x5730;&#x521B;&#x5EFA;ssh key,email&#x5730;&#x5740;&#x4E3A;&#x5728;Github&#x4E0A;&#x6CE8;&#x518C;&#x7684;&#x90AE;&#x7BB1;</div><div class="line">//&#x5728;C&#x76D8;&#x7684;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E0B;&#x627E;&#x5230;.ssh(&#x53EF;&#x80FD;&#x88AB;&#x9690;&#x85CF;)&#x91CC;&#x9762;&#x7684;id_rsa.pub</div><div class="line">//&#x5C06;id_rsa.pub&#x91CC;&#x7684;&#x4E1C;&#x897F;&#x5168;&#x90E8;&#x62F7;&#x8FC7;&#x53BB;&#x5373;&#x53EF;</div><div class="line">$ ssh -T git@github.com  //&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x6210;&#x529F;</div></pre></td></tr></table></figure>
+<h3 id="&#x8BBE;&#x7F6E;username&#x548C;email"><a href="#&#x8BBE;&#x7F6E;username&#x548C;email" class="headerlink" title="&#x8BBE;&#x7F6E;username&#x548C;email"></a>&#x8BBE;&#x7F6E;username&#x548C;email</h3><p>github&#x6BCF;&#x6B21;commit&#x90FD;&#x4F1A;&#x8BB0;&#x5F55;&#x4ED6;&#x4EEC;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;your name&quot;</div><div class="line">$ git config --global user.email &quot;your_email@youremail.com&quot;</div></pre></td></tr></table></figure></p>
+<h2 id="git&#x9879;&#x76EE;&#x5EFA;&#x7ACB;"><a href="#Git&#x9879;&#x76EE;&#x5EFA;&#x7ACB;" class="headerlink" title="Git&#x9879;&#x76EE;&#x5EFA;&#x7ACB;"></a>Git&#x9879;&#x76EE;&#x5EFA;&#x7ACB;</h2><p>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/&#x9996;&#x5148;&#x5728;Github&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x4ED3;&#x5E93;---&#x5FC5;&#x987B;&#x662F;&#x7A7A;&#x4ED3;&#x5E93;/</div><div class="line">$ git init 			//&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;Git&#x4ED3;&#x5E93;</div><div class="line">$ git remote add origin git@github.com:Magicwangs/Local.git </div><div class="line">		//&#x6DFB;&#x52A0;&#x9ED8;&#x8BA4;&#x8FDC;&#x7AEF;&#x4E3A;Local.git</div><div class="line"></div><div class="line">/*&#x63A5;&#x4E0B;&#x6765;&#x76F4;&#x63A5;&#x628A;&#x4F60;&#x60F3;&#x8981;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x5E93;&#x91CC;&#x7684;&#x4E1C;&#x897F;&#x62D6;&#x8FDB;&#x4ED3;&#x5E93;&#x76EE;&#x5F55;&#x4E0B;*/</div><div class="line"></div><div class="line">$ git add -A  		//&#x628A;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x5230;&#x4ED3;&#x5E93;&#x4E2D;</div><div class="line">$ git commit -m &quot;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&quot;  //&#x8BF4;&#x660E;&#x4F60;&#x8FD9;&#x6B21;&#x4FEE;&#x6539;&#x4E86;&#x4EC0;&#x4E48;</div><div class="line">$ git push origin master 	//&#x6DFB;&#x52A0;&#x5230;origin&#x7684;master&#x5206;&#x652F;</div></pre></td></tr></table></figure></p>
+<p>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/*&#x4ECE;&#x522B;&#x4EBA;&#x90A3;&#x91CC;Fork&#x6216;&#x8005;&#x672C;&#x6765;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x4ED3;&#x5E93;&#x5C31;&#x6709;&#x4EE3;&#x7801;&#x7684;*/</div><div class="line">$ git clone git@github.com:Magicwangs/chenguanfu511.git</div><div class="line">//&#x76F4;&#x63A5;git clone&#x8FC7;&#x6765;&#x5373;&#x53EF;,&#x4F46;&#x9ED8;&#x8BA4;&#x53EA;&#x6DFB;&#x52A0;master&#x5206;&#x652F;</div><div class="line"></div><div class="line">$ git branch -a //&#x67E5;&#x770B;&#x9690;&#x85CF;&#x5206;&#x652F;</div><div class="line">//&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x65B0;&#x5EFA;&#x540C;&#x540D;&#x5206;&#x652F;&#xFF0C;&#x518D;pull&#x4E0B;&#x6765;&#xFF0C;&#x6216;&#x8005;&#x4E00;&#x6B65;&#x5230;&#x4F4D;</div><div class="line"></div><div class="line">$ git checkout -b test origin/test</div><div class="line">//&#x6216;&#x8005;</div><div class="line">$ git checkout -t origin/test</div></pre></td></tr></table></figure></p>
+<h2 id="&#x66F4;&#x65B0;&#x8FDC;&#x7AEF;&#x4FEE;&#x6539;&#x548C;&#x5408;&#x5E76;"><a href="#&#x66F4;&#x65B0;&#x8FDC;&#x7AEF;&#x4FEE;&#x6539;&#x548C;&#x5408;&#x5E76;" class="headerlink" title="&#x66F4;&#x65B0;&#x8FDC;&#x7AEF;&#x4FEE;&#x6539;&#x548C;&#x5408;&#x5E76;"></a>&#x66F4;&#x65B0;&#x8FDC;&#x7AEF;&#x4FEE;&#x6539;&#x548C;&#x5408;&#x5E76;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git pull origin master  //&#x5C06;origin&#x8FDC;&#x7AEF;&#x7684;master&#x5206;&#x652F;&#x5185;&#x5BB9;&#x66F4;&#x65B0;&#x5230;&#x672C;&#x5730;</div><div class="line"></div><div class="line">$ git merge test   </div><div class="line">//&#x5C06;test&#x5206;&#x652F;&#x548C;master&#x5408;&#x5E76;&#x2014;&#x2014;&#x7528;test&#x4EE3;&#x66FF;&#x5F53;&#x524D;&#x5206;&#x652F; </div><div class="line"></div><div class="line">&#x6240;&#x4EE5;&#x4E00;&#x822C;master&#x4E3A;&#x6700;&#x7EC8;&#x53D1;&#x884C;&#x7248;&#x672C;&#xFF0C;&#x5728;test&#x5206;&#x652F;&#x4FEE;&#x6539;&#x597D;&#x540E;&#x518D;&#x5408;&#x5E76;</div></pre></td></tr></table></figure>
+<h2 id="git&#x5206;&#x652F;"><a href="#Git&#x5206;&#x652F;" class="headerlink" title="Git&#x5206;&#x652F;"></a>Git&#x5206;&#x652F;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$ git branch //&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6709;&#x54EA;&#x4E9B;&#x5206;&#x652F;</div><div class="line">$ git branch fir //&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5206;&#x652F;fir</div><div class="line">$ git checkout -b test</div><div class="line">//&#x65B0;&#x5EFA;&#x5E76;&#x5207;&#x6362;&#x5230;test&#x5206;&#x652F;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x65B0;&#x5EFA;&#x65F6;&#x6240;&#x5728;&#x5206;&#x652F;&#x7684;&#x5185;&#x5BB9;</div><div class="line">$ git checkout master  //&#x5207;&#x6362;&#x56DE;master&#x5206;&#x652F;</div><div class="line">$ ls   //&#x67E5;&#x770B;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x5185;&#x5BB9;</div><div class="line"></div><div class="line">$ git branch test  //&#x5220;&#x9664;&#x672C;&#x5730;test&#x5206;&#x652F;</div><div class="line">$ git push origin :test  //&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5E93;&#x7684;test&#x5206;&#x652F;</div><div class="line">$ git push -u origin test</div><div class="line">//&#x5728;&#x8FDC;&#x7AEF;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;test&#x5206;&#x652F;,&#x5E76;&#x628A;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x4E0A;&#x53BB;</div></pre></td></tr></table></figure>
+<h2 id="&#x7248;&#x672C;&#x56DE;&#x9000;"><a href="#&#x7248;&#x672C;&#x56DE;&#x9000;" class="headerlink" title="&#x7248;&#x672C;&#x56DE;&#x9000;"></a>&#x7248;&#x672C;&#x56DE;&#x9000;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git log  //&#x67E5;&#x770B;commit&#x63D0;&#x4EA4;&#x5386;&#x53F2;</div><div class="line">$ git log --pretty=oneline   //&#x80FD;&#x770B;&#x5230;commit id</div><div class="line">$ git reset --hard a8d4349   </div><div class="line">//&#x5207;&#x6362;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#x4EE5;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;a8d4349&#x4E3A;commit id&#x524D;7&#x4F4D;</div></pre></td></tr></table></figure>
+<h2 id="git-flow"><a href="#git-flow" class="headerlink" title="git flow"></a>git flow</h2><h3 id="&#x5982;&#x4F55;&#x7BA1;&#x7406;git&#x5206;&#x652F;"><a href="#&#x5982;&#x4F55;&#x7BA1;&#x7406;Git&#x5206;&#x652F;&#xFF1F;" class="headerlink" title="&#x5982;&#x4F55;&#x7BA1;&#x7406;Git&#x5206;&#x652F;&#xFF1F;"></a>&#x5982;&#x4F55;&#x7BA1;&#x7406;Git&#x5206;&#x652F;&#xFF1F;</h3><ul>
+<li><strong>&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x5206;&#x652F;</strong><ul>
+<li><code>master</code>&#xFF1A;&#x4E3B;&#x5206;&#x652F;&#xFF0C;&#x5F3A;&#x8C03;&#x7A33;&#x5B9A;&#x6027;</li>
+<li><code>develop</code>&#xFF1A;&#x5F00;&#x53D1;&#x5206;&#x652F;&#xFF0C;&#x5404;&#x79CD;&#x6700;&#x65B0;&#x529F;&#x80FD;(feature)&#x548C;&#x6700;&#x65B0;&#x7684;bug&#x4FEE;&#x590D;(hotfix)&#x90FD;&#x4F1A;&#x5408;&#x5E76;&#x8FDB;develop&#x3002;&#x7A33;&#x5B9A;&#x7684;&#x65B0;&#x529F;&#x80FD;&#x5E94;&#x8BE5;&#x90FD;&#x8981;&#x5408;&#x5E76;&#x5230;develop&#x5206;&#x652F;</li>
+</ul>
+</li>
+<li><strong>&#x4E09;&#x4E2A;&#x652F;&#x63F4;&#x5206;&#x652F;</strong><ul>
+<li><code>feature</code>&#xFF1A;<strong>&#x529F;&#x80FD;&#x5206;&#x652F;</strong>&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x4ECE;develop&#x4E2D;&#x5206;&#x652F;&#x51FA;&#x6765;&#xFF0C;&#x5B8C;&#x6210;&#x540E;merge&#x56DE;develop</li>
+<li><code>release</code>&#xFF1A;&#x5F53;&#x5728;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x5B8C;&#x6210;feature&#x5F00;&#x53D1;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5BF9;feature&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x4E0E;&#x53D1;&#x5E03;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;release&#x5206;&#x652F;&#xFF0C;release&#x5206;&#x652F;&#x53EF;&#x4EE5;&#x5BF9;&#x5E94;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#xFF0C;&#x4E0D;&#x5E94;&#x8BE5;&#x5728;release&#x5206;&#x652F;&#x4E0A;&#x8FDB;&#x884C;&#x65B0;&#x529F;&#x80FD;&#x5F00;&#x53D1;&#xFF0C;release&#x5206;&#x652F;&#x4EC5;&#x4EC5;&#x5E94;&#x8BE5;&#x8FDB;&#x884C;&#x529F;&#x80FD;&#x9A8C;&#x8BC1;&#x4E0E;bug&#x4FEE;&#x590D;&#x3002;release&#x5206;&#x652F;&#x53D1;&#x5E03;&#x65F6;&#xFF0C;&#x8981;&#x53CC;&#x5411;merge&#x5230;develop&#x548C;master&#x3002;</li>
+<li><code>hotfix</code>&#xFF1A;<strong>&#x7D27;&#x6025;&#x4FEE;&#x590D;&#x5206;&#x652F;</strong>&#xFF0C;&#x5F53;develop&#x6216;&#x8005;master&#x53D1;&#x73B0;bug&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x65B0;&#x5EFA;hotfix&#x5206;&#x652F;&#xFF0C;&#x6765;&#x4FEE;&#x590D;bug,&#x4FEE;&#x590D;&#x540E;&#x53CC;&#x5411;merge&#x5230;develop&#x548C;master</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://7xrmky.com1.z0.glb.clouddn.com/git-flow.png?imageView/2/w/600" alt="git-flow"></p>
+<h3 id="git-flow&#x6307;&#x4EE4;"><a href="#git-flow&#x6307;&#x4EE4;" class="headerlink" title="git flow&#x6307;&#x4EE4;"></a>git flow&#x6307;&#x4EE4;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git flow init </div><div class="line">//&#x5728;&#x4E00;&#x4E2A;git&#x4E2D;&#x521D;&#x59CB;&#x5316;,&#x4F1A;&#x63D0;&#x793A;&#x547D;&#x540D;&#x60EF;&#x4F8B;&#xFF0C;&#x4E00;&#x76F4;&#x56DE;&#x8F66;&#x5373;&#x53EF;&#xFF0C;&#x4F1A;&#x5E2E;&#x4F60;&#x65B0;&#x5EFA;develop&#x5206;&#x652F;</div><div class="line"></div><div class="line">$ git flow feature start picture   //&#x4ECE;develop&#x4E2D;&#x65B0;&#x5EFA;feature&#x5206;&#x652F;</div><div class="line">$ git flow feature finish picture  //&#x7ED3;&#x675F;&#x8BE5;&#x5206;&#x652F;&#xFF0C;&#x81EA;&#x52A8;merge&#x56DE;develop&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x5220;&#x9664;&#x8BE5;&#x5206;&#x652F;</div><div class="line">$ git flow feature publish picture //&#x5C06;&#x4E00;&#x4E2A;feature&#x5206;&#x652F;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7AEF;</div><div class="line">$ git flow feature pull picture2   //&#x5C06;&#x522B;&#x4EBA;&#x4E0A;&#x4F20;&#x7684;feature&#x5206;&#x652F;pull&#x4E0B;&#x6765;</div><div class="line">//&#x5176;&#x4ED6;&#x7684;&#x4E5F;&#x5DEE;&#x4E0D;&#x591A;</div></pre></td></tr></table></figure>
+<ul>
+<li><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html" target="_blank" rel="external">git-flow &#x5907;&#x5FD8;&#x6E05;&#x5355;</a></li>
+</ul>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;" class="headerlink" title="&#x53C2;&#x8003;&#x8D44;&#x6599;"></a>&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><ul>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">&#x5ED6;&#x96EA;&#x5CF0;&#x7684;Git&#x6559;&#x7A0B;</a></li>
+<li><a href="http://gitref.org/zh/creating/#init" target="_blank" rel="external">Git &#x53C2;&#x8003;&#x624B;&#x518C;</a></li>
+<li><a href="https://github.com/xirong/my-git/blob/master/how-to-use-github.md" target="_blank" rel="external">how-to-use-github</a></li>
+<li><a href="http://www.runoob.com/w3cnote/git-guide.html" target="_blank" rel="external">Github &#x7B80;&#x660E;&#x6559;&#x7A0B;</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">Git-&#x7B80;&#x660E;&#x6307;&#x5357;</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/post/Python爬虫学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Python爬虫学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/post/Hexo-Yilia-主题优化总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo Yilia主题优化</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Git学习总结" data-title="Git学习笔记" data-url="http://Magicwangs.github.io/post/Git学习总结/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"magicwangs"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://magicwangs.github.io/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Magicwangs
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-75905730-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
