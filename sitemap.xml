@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://Magicwangs.github.io/post/SQLite%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/</loc>
+    <loc>http://Magicwangs.github.io/post/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%B8%AD%E6%96%87%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81%E7%94%9F%E6%88%90/</loc>
     
-    <lastmod>2016-10-19T12:12:03.773Z</lastmod>
+    <lastmod>2016-10-20T13:44:16.320Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://Magicwangs.github.io/post/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%8F%8A%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81%E7%94%9F%E6%88%90/</loc>
+    <loc>http://Magicwangs.github.io/about/index.html</loc>
     
-    <lastmod>2016-10-19T12:07:27.793Z</lastmod>
+    <lastmod>2016-10-20T13:41:31.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Magicwangs.github.io/post/SQLite%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/</loc>
+    
+    <lastmod>2016-10-19T12:12:03.773Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://Magicwangs.github.io/post/Python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2016-09-27T02:45:26.980Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Magicwangs.github.io/about/index.html</loc>
-    
-    <lastmod>2016-09-24T02:27:03.079Z</lastmod>
     
   </url>
   
