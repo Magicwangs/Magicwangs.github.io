@@ -185,6 +185,9 @@ Git 是由 Linux 之父 Linus Tovalds 为了更好地管理linux内核开发而�
 
       <div class="body-wrap"><article id="post-Git学习总结" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <span id="busuanzi_container_site_uv">
+      本站访客数<span id="busuanzi_value_site_uv"></span>人次
+    </span>
     <div class="article-meta">
       <a href="/post/Git学习总结/" class="article-date">
   	<time datetime="2016-04-13T03:02:16.000Z" itemprop="datePublished">2016-04-13</time>
@@ -205,7 +208,7 @@ Git 是由 Linux 之父 Linus Tovalds 为了更好地管理linux内核开发而�
   
 
       </header>
-              
+      
         <div class="article-info article-info-post">
           
 	<div class="article-tag tagcloud">
@@ -226,16 +229,16 @@ Git 是由 Linux 之父 Linus Tovalds 为了更好地管理linux内核开发而�
       
         
         
-                      
+          
             <div id="toc" class="article-toc">
             <h2>目录</h2>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github"><span class="toc-number">1.</span> <span class="toc-text">Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git配置"><span class="toc-number">2.</span> <span class="toc-text">Git配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加ssh"><span class="toc-number">2.1.</span> <span class="toc-text">添加SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置username和email"><span class="toc-number">2.2.</span> <span class="toc-text">设置username和email</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git项目建立"><span class="toc-number">3.</span> <span class="toc-text">Git项目建立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新远端修改和合并"><span class="toc-number">4.</span> <span class="toc-text">更新远端修改和合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git分支"><span class="toc-number">5.</span> <span class="toc-text">Git分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本回退"><span class="toc-number">6.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-flow"><span class="toc-number">7.</span> <span class="toc-text">git flow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何管理git分支"><span class="toc-number">7.1.</span> <span class="toc-text">如何管理Git分支？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-flow指令"><span class="toc-number">7.2.</span> <span class="toc-text">git flow指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">8.</span> <span class="toc-text">参考资料</span></a></li></ol>  
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github"><span class="toc-number">1.</span> <span class="toc-text">Github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git配置"><span class="toc-number">2.</span> <span class="toc-text">Git配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加ssh"><span class="toc-number">2.1.</span> <span class="toc-text">添加SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置username和email"><span class="toc-number">2.2.</span> <span class="toc-text">设置username和email</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git项目建立"><span class="toc-number">3.</span> <span class="toc-text">Git项目建立</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新远端修改和合并"><span class="toc-number">4.</span> <span class="toc-text">更新远端修改和合并</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git分支"><span class="toc-number">5.</span> <span class="toc-text">Git分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本回退"><span class="toc-number">6.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-flow"><span class="toc-number">7.</span> <span class="toc-text">git flow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何管理git分支"><span class="toc-number">7.1.</span> <span class="toc-text">如何管理Git分支？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-flow指令"><span class="toc-number">7.2.</span> <span class="toc-text">git flow指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">8.</span> <span class="toc-text">参考资料</span></a></li></ol>
             </div>
             <script type="text/javascript">
               var _article = document.getElementsByClassName('article')[0];
               <!-- setTimeout("_article.style.marginRight = '211px'",0);  -->
-              setTimeout("_article.className += ' article2'",0); 
-              setTimeout("document.getElementById('toc').style.right = '15px'", 0);                
+              setTimeout("_article.className += ' article2'",0);
+              setTimeout("document.getElementById('toc').style.right = '15px'", 0);
             </script>
           
         
