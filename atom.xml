@@ -4,9 +4,9 @@
   <subtitle>Work for Fun,Live for Love!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://Magicwangs.github.io/"/>
+  <link href="http://blog.magicwang.tech/"/>
   <updated>2016-10-20T14:00:54.391Z</updated>
-  <id>http://Magicwangs.github.io/</id>
+  <id>http://blog.magicwang.tech/</id>
   
   <author>
     <name>Magicwangs</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>关于字符编码及中文图片验证码生成</title>
-    <link href="http://Magicwangs.github.io/post/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%B8%AD%E6%96%87%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81%E7%94%9F%E6%88%90/"/>
-    <id>http://Magicwangs.github.io/post/关于字符编码及中文图片验证码生成/</id>
+    <link href="http://blog.magicwang.tech/post/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%B8%AD%E6%96%87%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81%E7%94%9F%E6%88%90/"/>
+    <id>http://blog.magicwang.tech/post/关于字符编码及中文图片验证码生成/</id>
     <published>2016-10-19T12:07:27.000Z</published>
     <updated>2016-10-20T14:00:54.391Z</updated>
     
@@ -38,19 +38,19 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://Magicwangs.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Python" scheme="http://Magicwangs.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://blog.magicwang.tech/tags/Python/"/>
     
-      <category term="UTF-8" scheme="http://Magicwangs.github.io/tags/UTF-8/"/>
+      <category term="UTF-8" scheme="http://blog.magicwang.tech/tags/UTF-8/"/>
     
   </entry>
   
   <entry>
     <title>SQLite学习小结</title>
-    <link href="http://Magicwangs.github.io/post/SQLite%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"/>
-    <id>http://Magicwangs.github.io/post/SQLite学习小结/</id>
+    <link href="http://blog.magicwang.tech/post/SQLite%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"/>
+    <id>http://blog.magicwang.tech/post/SQLite学习小结/</id>
     <published>2016-06-23T07:32:32.000Z</published>
     <updated>2016-10-19T12:12:03.773Z</updated>
     
@@ -89,19 +89,19 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://Magicwangs.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Python" scheme="http://Magicwangs.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://blog.magicwang.tech/tags/Python/"/>
     
-      <category term="SQLite" scheme="http://Magicwangs.github.io/tags/SQLite/"/>
+      <category term="SQLite" scheme="http://blog.magicwang.tech/tags/SQLite/"/>
     
   </entry>
   
   <entry>
     <title>Python爬虫学习</title>
-    <link href="http://Magicwangs.github.io/post/Python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://Magicwangs.github.io/post/Python爬虫学习笔记/</id>
+    <link href="http://blog.magicwang.tech/post/Python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://blog.magicwang.tech/post/Python爬虫学习笔记/</id>
     <published>2016-04-16T08:27:51.000Z</published>
     <updated>2016-09-27T02:45:26.980Z</updated>
     
@@ -151,19 +151,19 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://Magicwangs.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Python" scheme="http://Magicwangs.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://blog.magicwang.tech/tags/Python/"/>
     
-      <category term="Crawler" scheme="http://Magicwangs.github.io/tags/Crawler/"/>
+      <category term="Crawler" scheme="http://blog.magicwang.tech/tags/Crawler/"/>
     
   </entry>
   
   <entry>
     <title>Git学习笔记</title>
-    <link href="http://Magicwangs.github.io/post/Git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    <id>http://Magicwangs.github.io/post/Git学习总结/</id>
+    <link href="http://blog.magicwang.tech/post/Git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>http://blog.magicwang.tech/post/Git学习总结/</id>
     <published>2016-04-13T03:02:16.000Z</published>
     <updated>2016-04-28T00:39:09.782Z</updated>
     
@@ -220,19 +220,19 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://Magicwangs.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Github" scheme="http://Magicwangs.github.io/tags/Github/"/>
+      <category term="Github" scheme="http://blog.magicwang.tech/tags/Github/"/>
     
-      <category term="Git Flow" scheme="http://Magicwangs.github.io/tags/Git-Flow/"/>
+      <category term="Git Flow" scheme="http://blog.magicwang.tech/tags/Git-Flow/"/>
     
   </entry>
   
   <entry>
     <title>Hexo Yilia主题优化[更新中]</title>
-    <link href="http://Magicwangs.github.io/post/Hexo-Yilia-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E6%80%BB%E7%BB%93/"/>
-    <id>http://Magicwangs.github.io/post/Hexo-Yilia-主题优化总结/</id>
+    <link href="http://blog.magicwang.tech/post/Hexo-Yilia-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E6%80%BB%E7%BB%93/"/>
+    <id>http://blog.magicwang.tech/post/Hexo-Yilia-主题优化总结/</id>
     <published>2016-04-05T10:56:00.000Z</published>
     <updated>2016-10-21T14:07:28.054Z</updated>
     
@@ -257,7 +257,7 @@
 &lt;h2 id=&quot;&amp;#x6DFB;&amp;#x52A0;&amp;#x6587;&amp;#x7AE0;&amp;#x9605;&amp;#x8BFB;&amp;#x7EDF;&amp;#x8BA1;&quot;&gt;&lt;a href=&quot;#&amp;#x6DFB;&amp;#x52A0;&amp;#x6587;&amp;#x7AE0;&amp;#x9605;&amp;#x8BFB;&amp;#x7EDF;&amp;#x8BA1;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x6DFB;&amp;#x52A0;&amp;#x6587;&amp;#x7AE0;&amp;#x9605;&amp;#x8BFB;&amp;#x7EDF;&amp;#x8BA1;&quot;&gt;&lt;/a&gt;&amp;#x6DFB;&amp;#x52A0;&amp;#x6587;&amp;#x7AE0;&amp;#x9605;&amp;#x8BFB;&amp;#x7EDF;&amp;#x8BA1;&lt;/h2&gt;&lt;p&gt;&amp;#x6211;&amp;#x91C7;&amp;#x7528;&amp;#x7684;&amp;#x662F;&amp;#x7F51;&amp;#x7AD9;&amp;#x7EDF;&amp;#x8BA1;&amp;#x662F;&lt;a href=&quot;http://ibruce.info/2015/04/04/busuanzi/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x4E0D;&amp;#x849C;&amp;#x5B50;&lt;/a&gt;&lt;br&gt;&amp;#x4FEE;&amp;#x6539;&lt;code&gt;\themes\yilia\layout\_partial\post\date.ejs&lt;/code&gt;&amp;#x5982;&amp;#x4E0B;&amp;#x5373;&amp;#x53EF;&lt;br&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;a href=&amp;quot;&amp;lt;%- url_for(post.path) %&amp;gt;&amp;quot; class=&amp;quot;&amp;lt;%= class_name %&amp;gt;&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  	&amp;lt;time datetime=&amp;quot;&amp;lt;%= date_xml(post.date) %&amp;gt;&amp;quot; itemprop=&amp;quot;datePublished&amp;quot;&amp;gt;&amp;lt;%= date(post.date, date_format) %&amp;gt;&amp;lt;/time&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  	&amp;lt;span id=&amp;quot;busuanzi_container_page_pv&amp;quot; style=&amp;quot;color:DarkGray&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;      view &amp;lt;span id=&amp;quot;busuanzi_value_page_pv&amp;quot;&amp;gt;&amp;lt;/span&amp;gt; times&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;/span&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/a&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;script async src=&amp;quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/script&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id=&quot;&amp;#x4EE3;&amp;#x7801;&amp;#x884C;&amp;#x6570;&amp;#x592A;&amp;#x591A;&amp;#x95EE;&amp;#x9898;&quot;&gt;&lt;a href=&quot;#&amp;#x4EE3;&amp;#x7801;&amp;#x884C;&amp;#x6570;&amp;#x592A;&amp;#x591A;&amp;#x95EE;&amp;#x9898;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x4EE3;&amp;#x7801;&amp;#x884C;&amp;#x6570;&amp;#x592A;&amp;#x591A;&amp;#x95EE;&amp;#x9898;&quot;&gt;&lt;/a&gt;&amp;#x4EE3;&amp;#x7801;&amp;#x884C;&amp;#x6570;&amp;#x592A;&amp;#x591A;&amp;#x95EE;&amp;#x9898;&lt;/h2&gt;&lt;p&gt;&amp;#x5F53;&amp;#x4EE3;&amp;#x7801;&amp;#x884C;&amp;#x6570;&amp;#x592A;&amp;#x591A;&amp;#x65F6;&amp;#xFF08;&amp;#x5C31;&amp;#x50CF;&amp;#x4E0A;&amp;#x9762;&amp;#x90A3;&amp;#x6837;&amp;#xFF09;&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x628A;&amp;#x51E0;&amp;#x767E;&amp;#x884C;&amp;#x4EE3;&amp;#x7801;&amp;#x5168;&amp;#x90E8;&amp;#x663E;&amp;#x793A;&amp;#x5728;&amp;#x535A;&amp;#x5BA2;&amp;#x4E2D;&amp;#x663E;&amp;#x5F97;&amp;#x5F88;&amp;#x4E0D;&amp;#x7F8E;&amp;#x89C2;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x9700;&amp;#x8981;&amp;#x8BBE;&amp;#x7F6E;&amp;#x4EE3;&amp;#x7801;&amp;#x5757;&amp;#x7684;&amp;#x6700;&amp;#x5927;&amp;#x9AD8;&amp;#x5EA6;&amp;#x3002;&amp;#x5177;&amp;#x4F53;&amp;#x65B9;&amp;#x6CD5;&amp;#x662F;&amp;#x4FEE;&amp;#x6539;&lt;code&gt;source/css/_partial/highlight.styl&lt;/code&gt;&amp;#x4E2D;&amp;#x7684;&amp;#x4E0B;&amp;#x5217;&amp;#x4EE3;&amp;#x7801;,&amp;#x5728;&amp;#x5927;&amp;#x6982;40&amp;#x884C;&amp;#x5DE6;&amp;#x53F3;&amp;#x7684;&amp;#x4F4D;&amp;#x7F6E;&amp;#x589E;&amp;#x52A0;max-height&amp;#x3002;&lt;/p&gt;
 &lt;figure class=&quot;highlight styl&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.highlight&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  @extend &lt;span class=&quot;variable&quot;&gt;$code&lt;/span&gt;-block&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;border-radius&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;4px&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;max-height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;500px&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  pre&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;border&lt;/span&gt;: none&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;margin&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;padding&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&quot;&gt;&lt;a href=&quot;#&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&quot;&gt;&lt;/a&gt;&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&lt;/h2&gt;&lt;p&gt;&amp;#x5173;&amp;#x4E8E;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&amp;#xFF0C;&amp;#x6211;&amp;#x6DFB;&amp;#x52A0;&amp;#x7684;&amp;#x662F;&lt;a href=&quot;http://magicwangs.github.io/tags/&quot;&gt;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&lt;/a&gt;&amp;#xFF0C;&amp;#x76F8;&amp;#x5173;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x53EF;&amp;#x4EE5;&amp;#x53C2;&amp;#x8003;&amp;#x4EE5;&amp;#x4E0B;&amp;#x8FD9;&amp;#x51E0;&amp;#x7BC7;&amp;#x6559;&amp;#x7A0B;&amp;#x3002;&lt;/p&gt;
+&lt;h2 id=&quot;&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&quot;&gt;&lt;a href=&quot;#&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&quot;&gt;&lt;/a&gt;&amp;#x6DFB;&amp;#x52A0;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&lt;/h2&gt;&lt;p&gt;&amp;#x5173;&amp;#x4E8E;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&amp;#xFF0C;&amp;#x6211;&amp;#x6DFB;&amp;#x52A0;&amp;#x7684;&amp;#x662F;&lt;a href=&quot;http://magicwangs.github.io/tags/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x7403;&amp;#x5F62;&amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&lt;/a&gt;&amp;#xFF0C;&amp;#x76F8;&amp;#x5173;&amp;#x7684;&amp;#x64CD;&amp;#x4F5C;&amp;#x53EF;&amp;#x4EE5;&amp;#x53C2;&amp;#x8003;&amp;#x4EE5;&amp;#x4E0B;&amp;#x8FD9;&amp;#x51E0;&amp;#x7BC7;&amp;#x6559;&amp;#x7A0B;&amp;#x3002;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.a-ho.com/2016/01/05/hexo-%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/#u521B_u5EFA_u6807_u7B7E_u4E91_u9875_u9762&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo &amp;#x535A;&amp;#x5BA2;&amp;#x4F18;&amp;#x5316;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://moxfive.xyz/2015/10/25/hexo-tag-cloud/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x8BA9; Hexo &amp;#x81EA;&amp;#x52A8;&amp;#x751F;&amp;#x6210; Tag Cloud &amp;#x6807;&amp;#x7B7E;&amp;#x4E91;&amp;#x9875;&amp;#x9762;&lt;/a&gt;&lt;/li&gt;
@@ -282,19 +282,19 @@
     
     </summary>
     
-      <category term="学习笔记" scheme="http://Magicwangs.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Hexo" scheme="http://Magicwangs.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://blog.magicwang.tech/tags/Hexo/"/>
     
-      <category term="Yilia" scheme="http://Magicwangs.github.io/tags/Yilia/"/>
+      <category term="Yilia" scheme="http://blog.magicwang.tech/tags/Yilia/"/>
     
   </entry>
   
   <entry>
     <title>Markdown学习总结</title>
-    <link href="http://Magicwangs.github.io/post/Markdown%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    <id>http://Magicwangs.github.io/post/Markdown学习总结/</id>
+    <link href="http://blog.magicwang.tech/post/Markdown%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>http://blog.magicwang.tech/post/Markdown学习总结/</id>
     <published>2016-04-03T11:21:32.000Z</published>
     <updated>2016-04-06T08:53:22.171Z</updated>
     
@@ -341,17 +341,17 @@ height:0;&quot;&gt;&lt;br&gt;&lt;iframe style=&quot;position: absolute;top: 0;le
     
     </summary>
     
-      <category term="学习笔记" scheme="http://Magicwangs.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Markdown" scheme="http://Magicwangs.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://blog.magicwang.tech/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://Magicwangs.github.io/post/Hello-World/"/>
-    <id>http://Magicwangs.github.io/post/Hello-World/</id>
+    <link href="http://blog.magicwang.tech/post/Hello-World/"/>
+    <id>http://blog.magicwang.tech/post/Hello-World/</id>
     <published>2016-04-02T03:26:01.000Z</published>
     <updated>2016-06-01T14:48:12.079Z</updated>
     
@@ -367,14 +367,14 @@ height:0;&quot;&gt;&lt;br&gt;&lt;iframe style=&quot;position: absolute;top: 0;le
     
     </summary>
     
-      <category term="随想" scheme="http://Magicwangs.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随想" scheme="http://blog.magicwang.tech/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-      <category term="Github Page" scheme="http://Magicwangs.github.io/tags/Github-Page/"/>
+      <category term="Github Page" scheme="http://blog.magicwang.tech/tags/Github-Page/"/>
     
-      <category term="Hexo" scheme="http://Magicwangs.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://blog.magicwang.tech/tags/Hexo/"/>
     
-      <category term="Markdown" scheme="http://Magicwangs.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://blog.magicwang.tech/tags/Markdown/"/>
     
   </entry>
   

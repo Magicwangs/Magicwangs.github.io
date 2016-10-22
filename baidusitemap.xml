@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.magicwang.tech/post/Hexo-Yilia-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2016-10-21T14:07:28.054Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo Yilia主题优化[更新中]</title>
+        <pubTime>2016-04-05T10:56:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Yilia</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.magicwang.tech/post/%E5%85%B3%E4%BA%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%8F%8A%E4%B8%AD%E6%96%87%E5%9B%BE%E7%89%87%E9%AA%8C%E8%AF%81%E7%A0%81%E7%94%9F%E6%88%90/</loc>
+    <lastmod>2016-10-20T14:00:54.391Z</lastmod>
+    <data>
+        <display>
+        <title>关于字符编码及中文图片验证码生成</title>
+        <pubTime>2016-10-19T12:07:27.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>UTF-8</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://blog.magicwang.tech/post/SQLite%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2016-10-19T12:12:03.773Z</lastmod>
+    <data>
+        <display>
+        <title>SQLite学习小结</title>
+        <pubTime>2016-06-23T07:32:32.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>SQLite</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.magicwang.tech/post/Python%E7%88%AC%E8%99%AB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2016-09-27T02:45:26.980Z</lastmod>
+    <data>
+        <display>
+        <title>Python爬虫学习</title>
+        <pubTime>2016-04-16T08:27:51.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Crawler</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.magicwang.tech/post/Hello-World/</loc>
+    <lastmod>2016-06-01T14:48:12.079Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-04-02T03:26:01.000Z</pubTime>
+        
+        <tag>Github Page</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="随想" url="http://blog.magicwang.tech/categories/%E9%9A%8F%E6%83%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.magicwang.tech/post/Git%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2016-04-28T00:39:09.782Z</lastmod>
+    <data>
+        <display>
+        <title>Git学习笔记</title>
+        <pubTime>2016-04-13T03:02:16.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>Git Flow</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.magicwang.tech/post/Markdown%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2016-04-06T08:53:22.171Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown学习总结</title>
+        <pubTime>2016-04-03T11:21:32.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="学习笔记" url="http://blog.magicwang.tech/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
